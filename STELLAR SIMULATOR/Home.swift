@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct Home: View {
+    
+    @State private var selected = "1"
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            HStack {
+                
+                VStack {
+                    
+                    VStack {
+                        if selected == "1" {
+                            PHO_Map()
+                            
+                        } else {
+                            HStack {
+                                Text("2")
+                                Spacer()
+                            }
+                            Spacer()
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+        
     }
 }
 

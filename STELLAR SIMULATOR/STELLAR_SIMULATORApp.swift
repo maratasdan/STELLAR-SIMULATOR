@@ -11,7 +11,9 @@ import SwiftUI
 struct STELLAR_SIMULATORApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
+//            DR_Panel()
+//            DR_PanelDetails()
         }
     }
 }

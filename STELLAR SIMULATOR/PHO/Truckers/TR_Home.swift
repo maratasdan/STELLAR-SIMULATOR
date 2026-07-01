@@ -37,6 +37,7 @@ struct TR_Home: View {
     ]
     
     @State private var showMenu = false
+    @State private var showDashboard: Bool = false
     
     @State private var currentType: String = ""
     @State private var currentDateTime: String = ""
@@ -165,6 +166,30 @@ struct TR_Home: View {
             .onReceive(timer) { value in
                 currentDate = value
             }
+        }
+        .toolbar {
+//
+//            ToolbarItem(placement: .topBarTrailing) {
+//                
+//                Button(action: {
+//                    showDashboard = true
+//                }){
+//                    Image(systemName: "chart.bar.xaxis")
+//                        .foregroundColor(Color.blue)
+//                }
+//                .buttonStyle(.glassProminent)
+//                .tint(Color.white)
+//                
+//            }
+//
+//            ToolbarItem(placement: .principal) {
+//                Text("Waiting Trucks")
+//                    .font(.headline)
+//                    .foregroundColor(Color.white)
+//            }
+        }
+        .navigationDestination(isPresented: $showDashboard) {
+            TR_Dashboard()
         }
     }
     
